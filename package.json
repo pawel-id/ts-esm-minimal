@@ -1,7 +1,7 @@
 {
-  "name": "ts-starter",
+  "name": "ts-esm-minimal",
   "version": "1.0.0",
-  "description": "",
+  "description": "Minimal Typescript to build native ESM example",
   "type": "module",
   "main": "index.js",
   "scripts": {
