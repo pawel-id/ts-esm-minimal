@@ -32,6 +32,7 @@ tests.
 
 https://www.typescriptlang.org/docs/handbook/esm-node.html
 https://2ality.com/2021/06/typescript-esm-nodejs.html
+https://stackoverflow.com/questions/71463698/why-we-need-nodenext-typescript-compiler-option-when-we-have-esnext
 
 Typescript suggested node.js v 18 tsconfig.json uses CommonJS. Leavign here for
 reference: https://github.com/tsconfig/bases/blob/main/bases/node18.json
