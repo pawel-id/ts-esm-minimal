@@ -33,5 +33,6 @@ tests.
 ## resources
 
 - https://www.typescriptlang.org/docs/handbook/esm-node.html
+- https://typestrong.org/ts-node/docs/imports#native-ecmascript-modules
 - https://2ality.com/2021/06/typescript-esm-nodejs.html
 - https://stackoverflow.com/questions/71463698/why-we-need-nodenext-typescript-compiler-option-when-we-have-esnext
