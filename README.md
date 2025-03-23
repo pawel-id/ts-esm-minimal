@@ -3,7 +3,8 @@
 The goal of this is to combine the modern things of node.js in single project:
 ESM module system and Typescript.
 
-The key setting of 'tsconfig.json':
+The key setting of 'tsconfig.json' is
+[module](https://www.typescriptlang.org/docs/handbook/modules/reference.html#the-module-compiler-option):
 
 ```json
 {
