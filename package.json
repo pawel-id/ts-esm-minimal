@@ -1,27 +1,4 @@
 {
-  "name": "ts-esm-minimal",
-  "version": "1.0.0",
-  "description": "Minimal Typescript to build native ESM example",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test:tap": "tap --ts test/tap/**/*.test.ts",
-    "test:mocha": "mocha --require ts-node/esm test/mocha/**/*.test.ts",
-    "build": "tsc --build",
-    "serve": "ts-node ./src",
-    "start": "node ./dist"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/mocha": "^10.0.1",
-    "@types/tap": "^15.0.8",
-    "mocha": "^10.2.0",
-    "tap": "^16.3.4",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.0.4"
-  },
   "tap": {
     "ts": false,
     "node-arg": [
@@ -35,7 +12,31 @@
       "no-warnings"
     ]
   },
+  "name": "ts-esm-minimal",
+  "version": "1.0.0",
+  "description": "Minimal Typescript to build native ESM example",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test:tap": "tap --ts test/tap/**/*.test.ts",
+    "test:mocha": "mocha --require ts-node/esm test/mocha/**/*.test.ts",
+    "build": "tsc --build",
+    "serve": "ts-node ./src",
+    "start": "node ./dist"
+  },
+  "keywords": [],
   "dependencies": {
-    "debug": "^4.3.4"
+    "debug": "^4.3.4",
+    "fastify": "^4.15.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/tap": "^15.0.8",
+    "mocha": "^10.2.0",
+    "tap": "^16.3.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
   }
 }
