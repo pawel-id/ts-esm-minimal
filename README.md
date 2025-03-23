@@ -3,13 +3,21 @@
 The goal of this is to combine the modern things of node.js in single project:
 ESM module system and Typescript.
 
-The key settings of 'tsconfig.json' is:
+The key setting of 'tsconfig.json':
 
 ```json
 {
   "complilerOptions": {
     "module": "NodeNext"
   }
+}
+```
+
+the 'package.json':
+
+```json
+{
+  "type": "module"
 }
 ```
 
@@ -30,7 +38,6 @@ better way to run the code:
 - Node.js’s own experimental support for TypeScript via flags like
   --experimental-strip-types (introduced in Node.js 20+).
 - plenty of other less recommended, but still viable options 'tsimp', 'tsx', ...
-
 
 ## resources
 
