@@ -3,14 +3,6 @@
 The goal of this is to combine the modern things of node.js in single project:
 ESM module system and Typescript.
 
-Note that at this moment, the CommonJS module system is still the default target
-for Typescript https://www.typescriptlang.org/tsconfig#module _'...You very
-likely want "CommonJS" for node projects'_. Indeed it is reasonable to proceed
-with CommonJS for libraries for better compatibility, see default
-[tsconfig.json node.js v18](https://github.com/tsconfig/bases/blob/main/bases/node18.json).
-However for applications, ESM should be fine and this is why that project has
-been created.
-
 The key settings of 'tsconfig.json' is:
 
 ```json
@@ -21,16 +13,28 @@ The key settings of 'tsconfig.json' is:
 }
 ```
 
-## unit tests
+## recommendations
 
-The unit tests require some additional attention. The test folder is excluded in
-'tsconfig.json'. They also need `node --loader=ts-node/esm` to run properly.
-Without this seeting it throws
-`TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension ".ts"`. See
-`package.json` for detailed configuration. There are bothe node-tap and mocha
-tests.
+- https://www.totaltypescript.com/typescript-and-node
+- https://www.totaltypescript.com/tsconfig-cheat-sheet
+
+## ts-node considerations
+
+[ts-node](https://github.com/TypeStrong/ts-node) seems to be stalled without
+updates and bugfixes. E.g. annoying bug
+[2100](https://github.com/TypeStrong/ts-node/issues/2100) still open. There is
+better way to run the code:
+
+- use of `tsc --watch` which compiles the TypeScript code to JavaScript in
+  real-time
+- Node.js’s own experimental support for TypeScript via flags like
+  --experimental-strip-types (introduced in Node.js 20+).
+- plenty of other less recommended, but still viable options 'tsimp', 'tsx', ...
+
 
 ## resources
+
+note: some of them might be partially outdated
 
 - https://www.typescriptlang.org/docs/handbook/esm-node.html
 - https://typestrong.org/ts-node/docs/imports#native-ecmascript-modules
